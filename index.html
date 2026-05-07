@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazar-Tube I Downloader YouTube, Tiktok and Instagram</title>
+    <!-- <script src="https://pl28393058.effectivegatecpm.com/a9/94/33/a99433531ab39c6f09cf29a6b8302e1f.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="igdl.css">
+    
+</head>
+<body class="page-ig min-h-screen flex flex-col items-center justify-center p-4">
+
+    <script src="https://pl28393183.effectivegatecpm.com/c6/2f/14/c62f14d8806f4129155988df7c8f3eaf.js"></script>
+    <!-- Splash Screen -->
+    <div id="splash">
+        <div class="loader-logo">Mazar-Tube</div>
+        <div class="progress-bar">
+            <div class="progress-inner" id="p-bar"></div>
+        </div>
+        <p class="text-gray-500 text-[10px] mt-4 tracking-widest uppercase text-center">Preparing Instagram feeds</p>
+    </div>
+
+    <!-- App Content -->
+    <div id="app" class="hidden w-full max-w-xl flex flex-col items-center">
+        
+        <!-- Toggle Navigation -->
+        <div class="flex justify-center mb-10 fade-in" style="animation-delay: 0.1s;">
+            <div class="relative flex bg-white/5 border border-white/10 p-1 rounded-2xl w-80 shadow-inner">
+                <div id="nav-indicator" class="absolute top-1 bottom-1 left-1 rounded-xl transition-all duration-300 ease-out z-0"></div>
+                <button onclick="window.location.href='index.html'" class="relative flex-1 py-2 z-10 nav-btn" id="btn-ig">INSTA</button>
+                <button onclick="window.location.href='tiktok.html'" class="relative flex-1 py-2 z-10 nav-btn" id="btn-tt">TIKTOK</button>
+                <button onclick="window.location.href='youtube.html'" class="relative flex-1 py-2 z-10 nav-btn" id="btn-yt">YOUTUBE</button>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-10 fade-in" style="animation-delay: 0.2s;">
+            <div class="w-20 h-20 insta-gradient rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl floating">
+                <i class="fab fa-instagram text-4xl text-white"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-2">
+                INSTA<span class="text-pink-600">GRAM</span>
+            </h1>
+            <p class="text-gray-400 font-light text-sm">Download Reels & HD Videos</p>
+        </header>
+
+        <!-- Main Card -->
+        <main class="w-full glass rounded-[2.5rem] p-6 md:p-10 fade-in" style="animation-delay: 0.3s;">
+            <div class="space-y-4">
+                <input 
+                    type="text" 
+                    id="urlInput"
+                    placeholder="Enter Video Link.."
+                    class="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 outline-none text-white focus:border-pink-500 transition-all placeholder:text-gray-600"
+                >
+                <button 
+                    onclick="handleDownload()"
+                    id="dlBtn"
+                    class="w-full insta-gradient py-5 rounded-2xl font-bold uppercase tracking-widest text-sm flex items-center justify-center space-x-3 hover:brightness-110 active:scale-95 transition-all"
+                >
+                    <span id="btnText">Download</span>
+                    <div id="miniLoader" class="hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                </button>
+            </div>
+
+            <div id="statusText" class="text-center text-[10px] text-gray-500 mt-4 uppercase tracking-[0.2em] h-4"></div>
+
+            <!-- Result Box -->
+            <div id="resultBox" class="hidden mt-10 space-y-6 fade-in">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video">
+                    <video id="videoPlayer" controls class="w-full h-full object-contain"></video>
+                </div>
+                
+                <a 
+                    id="saveBtn"
+                    href="#" 
+                    target="_blank"
+                    class="block w-full bg-white text-black text-center py-4 rounded-2xl font-bold hover:bg-gray-200 transition-colors flex items-center justify-center shadow-lg"
+                >
+                    <i class="fas fa-download mr-2"></i> RECORD THE VIDEO
+                </a>
+            </div>
+
+            <!-- Error -->
+            <div id="errorBox" class="hidden mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-500 text-xs text-center">
+                <i class="fas fa-exclamation-circle mr-2"></i> 
+                <span>All sources failed. Check your link.</span>
+            </div>
+        </main>
+
+        <footer class="mt-12 text-center fade-in">
+  <div class="flex justify-center gap-6 mb-4 text-gray-500 text-lg">
+    <a href="#" class="hover:text-red-600 transition">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="#" class="hover:text-black transition">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="#" class="hover:text-blue-600 transition">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#" class="hover:text-sky-500 transition">
+      <i class="fab fa-telegram"></i>
+    </a>
+    <a href="#" class="hover:text-green-500 transition">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">
+    • Powered by <span class="text-gray-800 font-semibold">SAHEB KHAN SULAIMANI</span>
+  </div>
+</footer>
+    </div>
+
+    <script src="igdl.js"></script>
+</body>
+</html>

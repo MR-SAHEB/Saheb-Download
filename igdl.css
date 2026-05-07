@@ -1,0 +1,78 @@
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #050505;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Splash Screen */
+        #splash {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+
+        .loader-logo {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-inner {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #dc2743, #cc2366);
+            transition: width 2s ease-in-out;
+        }
+
+        /* Toggle Navigation */
+        .nav-btn { color: #888; transition: color 0.3s; font-size: 10px; font-weight: 800; letter-spacing: 1px; }
+        body.page-ig #nav-indicator { 
+            width: calc(33.33% - 4px); 
+            left: 4px; 
+            background: linear-gradient(45deg, #f09433, #dc2743); 
+            box-shadow: 0 0 15px rgba(220, 39, 67, 0.4);
+        }
+        body.page-ig #btn-ig { color: white; }
+
+        /* Main Styles */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .insta-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #dc2743 50%, #bc1888 100%);
+        }
+
+        .fade-in { animation: fadeIn 0.8s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    
